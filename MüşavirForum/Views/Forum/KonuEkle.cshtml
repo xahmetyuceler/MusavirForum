@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="~/Content/assest/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/assest/css/main.css">
+    <link rel="stylesheet" href="~/Content/assest/css/forum.css">
+    <link rel="preconnect" href="http://fonts.googleapis.com">
+    <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
+    <link href="~/Content/assest/fonts/fontgoogle1.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script type="text/javascript" src="~/Content/assest/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">
+      tinymce.init({
+        selector: "#mytextarea",
+        width:'600px',
+        height:'400px'
+      });
+    </script>
+    <title>Zirve Müşavir Forum</title>
+
+
+</head>
+<body>
+    @RenderPage("~/Views/Shared/_Header.cshtml")
+    <div class="in2"></div>
+
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <div class="container col-6">
+        <form id="contact-form" method="post" action="#" role="form">
+
+            <div class="messages"></div>
+
+            <div class="controls">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <b>Yeni Konu Aç</b><br><br>
+                            <label for="form_name">Konu Başlıgı *</label>
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Konu Başlıgı *" required="required" data-error="Firstname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-6">
+                        Konu Kategori *
+                        <select class="form-select" aria-label="Default select example" required="required">
+                            <option selected>Seç</option>
+                            <option value="1">Müşavir</option>
+                            <option value="2">Finansman</option>
+                            <option value="3">Ticari</option>
+                            <option value="4">Forum Yardım</option>
+                            <option value="5">Tartışma</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><textarea id="mytextarea"></textarea></p>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-3">
+            <input class="form-control" type="file" id="formFile" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
+        </div>
+
+    </div>
+    <div class="col-md-12">
+        <input type="submit" class="btn btn-success btn-send" value="Yeni Konu Aç">
+    </div>
+    </div>
+    </div>
+
+    </form>
+
+    </div>
+    </div>
+
+
+    <div class="in2"></div>
+
+    </div>
+    </div>
+    @RenderPage("~/Views/Shared/_footer.cshtml")
+</body>
+<script src="~/Content/assest/js/bootstrap.bundle.min.js"></script>
+</html>
